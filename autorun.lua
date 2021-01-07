@@ -19,13 +19,15 @@ while true do
         term.clear()
     repeat
         print("Combustivel dropado!")
-        r.setOutput(sides.top, 15)
+        r.setOutput(sides.bottom, 15)
         os.sleep(1)
-        r.setOutput(sides.top, 0)
-        os.sleep(8)
+        r.setOutput(sides.bottom, 0)
+        os.sleep(28)
     until wrong == true
-elseif r.setWakeOnRedstone(sides.bottom) then
+elseif r.setInput(sides.right) then
      term.clear()
+     print("Maquina desligada")
+     os.sleep(1)
      wrong=true
 else 
     wrong=true
