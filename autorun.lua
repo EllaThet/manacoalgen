@@ -24,12 +24,12 @@ while true do
         r.setOutput(sides.bottom, 0)
         os.sleep(28)
     until wrong == true
-elseif r.setInput(sides.right) then
+  elseif r.getInput(sides.right) == 15 then
      term.clear()
      print("Maquina desligada")
      os.sleep(1)
      wrong=true
-else 
+  else 
     wrong=true
   end
 end
